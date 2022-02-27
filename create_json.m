@@ -4,7 +4,6 @@ load('mpii_human_pose_v1_u12_1.mat');
 newJSON.dataset.MPII.filepath = {};
 nImgs = 1;
 annotations = RELEASE.annolist;
-clear RELEASE;
 for i=1:length(annotations)
     if isfield(annotations(i).annorect,'annopoints')==1
         newJSON.dataset.MPII.filepath  = [newJSON.dataset.MPII.filepath;annotations(i).image.name];
