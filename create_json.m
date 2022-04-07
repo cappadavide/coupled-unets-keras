@@ -39,17 +39,17 @@ for i=1:length(annotations)
     end
 end
 %% LSP DATASET
-load('joints.mat');
-for i=1:2000
-    tmpCellArray = joints(:,:,i);
-    newJSON.dataset.LSP.people(i).filepath = sprintf('img%04d.jpg',i);
-    for j=1:14
-        newJSON.dataset.LSP.people(i).keypoints(j).x = tmpCellArray(1,j);
-        newJSON.dataset.LSP.people(i).keypoints(j).y = tmpCellArray(2,j);
-        newJSON.dataset.LSP.people(i).keypoints(j).id = j;
-    end
-end
+%load('joints.mat');
+%for i=1:2000
+%    tmpCellArray = joints(:,:,i);
+%    newJSON.dataset.LSP.people(i).filepath = sprintf('img%04d.jpg',i);
+%    for j=1:14
+%        newJSON.dataset.LSP.people(i).keypoints(j).x = tmpCellArray(1,j);
+%        newJSON.dataset.LSP.people(i).keypoints(j).y = tmpCellArray(2,j);
+%        newJSON.dataset.LSP.people(i).keypoints(j).id = j;
+%    end
+%end
 %% CREATE FILE JSON
-fid = fopen('datasets.json','wt');
-fprintf(fid,jsonencode(newJSON),'PrettyPrint',true);
-fclose(fid);
+%fid = fopen('datasets.json','wt');
+%fprintf(fid,jsonencode(newJSON),'PrettyPrint',true);
+%fclose(fid);
